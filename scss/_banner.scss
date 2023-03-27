@@ -5,6 +5,8 @@
     @include banner-menu-position;
 
     &__header {
+        position: relative;
+        z-index: 4;
         display: flex;
         justify-content: space-between;
     }
@@ -27,5 +29,37 @@
         transform: translateY(-80%);
         border: .18rem solid $white;
     }
+
+    &__menu-mobile {
+        position: fixed;
+        display: flex;
+        align-items: center;
+        z-index: 1;
+        top: 0;
+        left: 100%;
+        @include banner-menu-position;
+        background-color: $black;
+        transition: .4s;
+
+        &--show {
+            top: 0;
+            left: 0;
+        }
+    }
+
+    &__menu-mobile-nav {
+        height: 250px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        font-size: 1.6rem;
+        text-transform: uppercase;
+        font-family: $fontJosefin;
+    }
+}
+
+//temporary line
+body {
+    height: 300vh;
 }
 
