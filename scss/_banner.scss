@@ -55,11 +55,22 @@
         font-size: 1.6rem;
         text-transform: uppercase;
         font-family: $fontJosefin;
+        transition: .2s;
+
+        & p:hover {
+            color: royalblue;
+        }
     }
 }
 
 //temporary line
 body {
     height: 300vh;
+}
+
+//clas for body to disable scrolling when mobile menu is active
+.stop-scrolling { 
+    height: 100%;
+    overflow: hidden;
 }
 
